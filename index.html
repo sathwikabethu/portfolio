@@ -59,9 +59,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.25rem 4rem;
-    background: rgba(4,15,22,0.8);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
+    background: rgba(4, 15, 22, 0.3);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .nav-logo {
@@ -378,6 +378,7 @@
     inset: 0;
     opacity: 0;
     transition: opacity 0.3s;
+    pointer-events: none;
   }
 
   .project-card.c1::before { background: radial-gradient(circle at top left, rgba(14,165,233,0.07), transparent 60%); }
@@ -455,6 +456,13 @@
     color: var(--accent);
     text-decoration: none;
     transition: opacity 0.2s;
+  }
+
+  .proj-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
   }
 
   .proj-link:hover { opacity: 0.7; }
@@ -692,8 +700,9 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="sathwika_resume.pdf" target="_blank">Resume</a></li>
   </ul>
-  <a href="mailto:you@email.com" class="nav-cta">hire me</a>
+  <a href="mailto:bethusathwika@gmail.com" class="nav-cta">hire me</a>
 </nav>
 
 <!-- HERO -->
@@ -705,12 +714,12 @@
     <span class="line2">with code.</span>
   </h1>
   <p class="hero-desc">
-    Final-year Computer Science student. I design and build full-stack applications,
-    explore machine learning, and contribute to open source.
+    Final-year B.Tech Computer Science student (2026). Experienced in building end-to-end ML systems and interactive AI-driven applications using Python, TensorFlow, and Streamlit.
   </p>
   <div class="hero-actions">
     <a href="#projects" class="btn-primary">View my work</a>
     <a href="#contact" class="btn-secondary">Get in touch →</a>
+    <a href="sathwika_resume.pdf" target="_blank" class="btn-secondary">View Resume 📄</a>
   </div>
   <div class="hero-stats">
     <div>
@@ -722,7 +731,7 @@
       <div class="stat-label">INTERNSHIPS</div>
     </div>
     <div>
-      <div class="stat-num">8.9</div>
+      <div class="stat-num">8.73</div>
       <div class="stat-label">CGPA</div>
     </div>
     <div>
@@ -738,23 +747,20 @@
     <div class="section-eyebrow">// ABOUT ME</div>
     <h2>Engineering thoughtful software, one commit at a time.</h2>
     <p class="about-text">
-      I'm a Computer Science student passionate about building
-      software that solves real problems. I enjoy working across the full stack — from
-      designing intuitive UIs to architecting backend systems.
+      I have a strong foundation in Machine Learning, Data Science, and AI-driven applications. I'm interested in developing intelligent systems that solve real-world problems at scale.
     </p>
     <p class="about-text">
-      Outside of class, I contribute to open source, participate in hackathons,
-      and mentor juniors in my college's coding club.
+      Outside of coursework, I actively participate in hackathons, having led a team for the Smart India Hackathon 2025, and consistently apply my skills in industry internships.
     </p>
     <div class="skills-grid">
-      <div class="skill-pill"><span class="skill-dot" style="background:var(--accent)"></span>Python / Django</div>
-      <div class="skill-pill"><span class="skill-dot" style="background:var(--accent2)"></span>React / Next.js</div>
-      <div class="skill-pill"><span class="skill-dot" style="background:var(--accent3)"></span>Node.js</div>
-      <div class="skill-pill"><span class="skill-dot" style="background:#fa9e6d"></span>PostgreSQL</div>
+      <div class="skill-pill"><span class="skill-dot" style="background:var(--accent)"></span>Python / C</div>
+      <div class="skill-pill"><span class="skill-dot" style="background:var(--accent2)"></span>TensorFlow</div>
+      <div class="skill-pill"><span class="skill-dot" style="background:var(--accent3)"></span>OpenCV / Streamlit</div>
+      <div class="skill-pill"><span class="skill-dot" style="background:#fa9e6d"></span>NumPy / Pandas</div>
       <div class="skill-pill"><span class="skill-dot" style="background:var(--accent)"></span>Machine Learning</div>
-      <div class="skill-pill"><span class="skill-dot" style="background:var(--accent2)"></span>Docker / AWS</div>
-      <div class="skill-pill"><span class="skill-dot" style="background:var(--accent3)"></span>TypeScript</div>
-      <div class="skill-pill"><span class="skill-dot" style="background:#fa9e6d"></span>Git / CI/CD</div>
+      <div class="skill-pill"><span class="skill-dot" style="background:var(--accent2)"></span>NLP / Computer Vision</div>
+      <div class="skill-pill"><span class="skill-dot" style="background:var(--accent3)"></span>Data Science</div>
+      <div class="skill-pill"><span class="skill-dot" style="background:#fa9e6d"></span>Git / GitHub</div>
     </div>
   </div>
   <div class="about-visual reveal" style="transition-delay:0.15s">
@@ -774,10 +780,10 @@
         <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-var">year</span> = <span class="c-num">4</span></span>
         <span class="code-line">&nbsp;</span>
         <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-var">interests</span> = [</span>
-        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"full-stack dev"</span>,</span>
         <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"machine learning"</span>,</span>
-        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"open source"</span>,</span>
-        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"hackathons"</span>,</span>
+        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"data science"</span>,</span>
+        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"computer vision"</span>,</span>
+        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"ai apps"</span>,</span>
         <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;]</span>
         <span class="code-line">&nbsp;</span>
         <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-keyword">def </span><span class="c-fn">is_open_to_work</span>(<span class="c-var">self</span>):</span>
@@ -794,7 +800,7 @@
       <div class="section-eyebrow">// PROJECTS</div>
       <h2>Things I've built</h2>
     </div>
-    <a href="#" class="see-all">View all on GitHub →</a>
+    <a href="https://github.com/sathwikabethu" target="_blank" class="see-all">View all on GitHub →</a>
   </div>
 
   <div class="projects-grid">
@@ -802,83 +808,83 @@
     <div class="project-card c1 reveal">
       <div class="proj-icon" style="background:rgba(14,165,233,0.1); border-color:rgba(14,165,233,0.2);">🧠</div>
       <div class="proj-type" style="color:var(--accent)">ACADEMIC · ML</div>
-      <div class="proj-title">Sentiment Analysis API</div>
-      <div class="proj-desc">Fine-tuned BERT model to classify social media sentiment with 91% accuracy. Deployed as a REST API serving 200+ requests/day.</div>
+      <div class="proj-title">Fake Social Profile Detection</div>
+      <div class="proj-desc">Developed a classification model to identify fake social media profiles using Neural Networks. Handled preprocessing, extraction, and model training.</div>
       <div class="proj-tags">
-        <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">FastAPI</span><span class="tag">HuggingFace</span>
+        <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Neural Networks</span>
       </div>
       <div class="proj-footer">
-        <span>91% accuracy</span>
+        <span>Model</span>
         <a href="#" class="proj-link">GitHub ↗</a>
       </div>
     </div>
 
     <div class="project-card c2 reveal" style="transition-delay:0.1s">
-      <div class="proj-icon" style="background:rgba(56,189,248,0.1); border-color:rgba(56,189,248,0.2);">🛒</div>
+      <div class="proj-icon" style="background:rgba(56,189,248,0.1); border-color:rgba(56,189,248,0.2);">🏠</div>
       <div class="proj-type" style="color:var(--accent2)">PERSONAL · FULLSTACK</div>
-      <div class="proj-title">CollegeSwap — Campus Marketplace</div>
-      <div class="proj-desc">P2P marketplace for students to buy and sell textbooks and supplies. Built with Next.js, Supabase, and Razorpay integration.</div>
+      <div class="proj-title">Smart Stay — Hostel Management</div>
+      <div class="proj-desc">A comprehensive hostel management system enabling tenant room applications, payment tracking, and an admin dashboard.</div>
       <div class="proj-tags">
-        <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">Tailwind</span>
+        <span class="tag">Django</span><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">Vercel</span>
       </div>
       <div class="proj-footer">
-        <span>300+ users</span>
-        <a href="#" class="proj-link">Live ↗</a>
+        <span>Full-stack</span>
+        <a href="https://hostel-management-system-seven-rho.vercel.app/" target="_blank" class="proj-link">Live ↗</a>
       </div>
     </div>
 
     <div class="project-card c3 reveal" style="transition-delay:0.2s">
-      <div class="proj-icon" style="background:rgba(125,211,252,0.1); border-color:rgba(125,211,252,0.2);">📊</div>
-      <div class="proj-type" style="color:var(--accent3)">INTERNSHIP · DATA</div>
-      <div class="proj-title">Real-time Analytics Dashboard</div>
-      <div class="proj-desc">Dashboard for visualising live e-commerce metrics. Reduced manual reporting time by 70% with automated data pipelines.</div>
+      <div class="proj-icon" style="background:rgba(125,211,252,0.1); border-color:rgba(125,211,252,0.2);">🛍️</div>
+      <div class="proj-type" style="color:var(--accent3)">PERSONAL · COMPUTER VISION</div>
+      <div class="proj-title">Virtual Shopping via Webcam</div>
+      <div class="proj-desc">Built a real-time gesture recognition system using OpenCV for virtual shopping interaction, optimizing image processing for low-latency response.</div>
       <div class="proj-tags">
-        <span class="tag">React</span><span class="tag">D3.js</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span>
+        <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Image Processing</span><span class="tag">Vercel</span>
       </div>
       <div class="proj-footer">
-        <span>–70% report time</span>
-        <a href="#" class="proj-link">Demo ↗</a>
+        <span>Full-stack</span>
+        <a href="https://virtual-shopping-seven.vercel.app/" target="_blank" class="proj-link">Live ↗</a>
       </div>
     </div>
 
     <div class="project-card c1 reveal" style="transition-delay:0.05s">
-      <div class="proj-icon" style="background:rgba(14,165,233,0.1); border-color:rgba(14,165,233,0.2);">🔐</div>
-      <div class="proj-type" style="color:var(--accent)">ACADEMIC · SECURITY</div>
-      <div class="proj-title">Decentralised Auth System</div>
-      <div class="proj-desc">Passwordless authentication using blockchain-based DIDs and zero-knowledge proofs. Final-year project.</div>
+      <div class="proj-icon" style="background:rgba(14,165,233,0.1); border-color:rgba(14,165,233,0.2);">💬</div>
+      <div class="proj-type" style="color:var(--accent)">INTERNSHIP · AI</div>
+      <div class="proj-title">Daily Lingo</div>
+      <div class="proj-desc">An AI-based chat application for language learning and conversation practice built with open-source LLMs and deployed via Streamlit.</div>
       <div class="proj-tags">
-        <span class="tag">Solidity</span><span class="tag">Web3.js</span><span class="tag">ZKP</span><span class="tag">React</span>
+        <span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">Streamlit</span>
       </div>
       <div class="proj-footer">
-        <span>In progress</span>
+        <span>Swecha Telangana</span>
         <a href="#" class="proj-link">GitHub ↗</a>
       </div>
     </div>
 
     <div class="project-card c2 reveal" style="transition-delay:0.15s">
-      <div class="proj-icon" style="background:rgba(56,189,248,0.1); border-color:rgba(56,189,248,0.2);">🤖</div>
-      <div class="proj-type" style="color:var(--accent2)">HACKATHON · AI</div>
-      <div class="proj-title">StudyBot — AI Tutor</div>
-      <div class="proj-desc">Conversational AI tutor that generates personalised quizzes from uploaded PDFs. Won Best EdTech Hack at HackWithIndia 2024.</div>
+      <div class="proj-icon" style="background:rgba(56,189,248,0.1); border-color:rgba(56,189,248,0.2);">📈</div>
+      <div class="proj-type" style="color:var(--accent2)">INTERNSHIP · ML</div>
+      <div class="proj-title">Real Estate Price Predictor</div>
+      <div class="proj-desc">Developed complete ML pipelines for real estate price prediction using structured datasets, visualised through a real-time Streamlit dashboard.</div>
       <div class="proj-tags">
-        <span class="tag">LangChain</span><span class="tag">OpenAI</span><span class="tag">Flask</span><span class="tag">Vue</span>
+        <span class="tag">Machine Learning</span><span class="tag">Python</span><span class="tag">Streamlit</span>
       </div>
       <div class="proj-footer">
-        <span>🏆 1st place</span>
-        <a href="#" class="proj-link">Devpost ↗</a>
+        <span>Infosys</span>
+        <a href="https://github.com/springboardmentorLive/Reality_AI" target="_blank" class="proj-link">GitHub ↗</a>
       </div>
     </div>
 
     <div class="project-card c3 reveal" style="transition-delay:0.25s">
-      <div class="proj-icon" style="background:rgba(125,211,252,0.1); border-color:rgba(125,211,252,0.2);">🗺️</div>
-      <div class="proj-type" style="color:var(--accent3)">OPEN SOURCE · TOOLS</div>
-      <div class="proj-title">Campus Nav CLI</div>
-      <div class="proj-desc">Command-line tool using Dijkstra's algorithm to find the shortest path between campus buildings with live occupancy data.</div>
+      <div class="proj-icon" style="background:rgba(125,211,252,0.1); border-color:rgba(125,211,252,0.2);">🏆</div>
+      <div class="proj-type" style="color:var(--accent3)">HACKATHON · AI</div>
+      <div class="proj-title">SIH 2025 AI Solution</div>
+      <div class="proj-desc">Led a team to design and develop an AI-based solution for the Smart India Hackathon. Managed task distribution and coordinated the implementation.</div>
       <div class="proj-tags">
-        <span class="tag">Python</span><span class="tag">Graph Theory</span><span class="tag">SQLite</span>
+        <span class="tag">AI</span><span class="tag">Team Leadership</span><span class="tag">Python</span>
       </div>
       <div class="proj-footer">
-        <span>180+ stars</span>
+        <span>Team Lead</span>
         <a href="#" class="proj-link">GitHub ↗</a>
       </div>
     </div>
@@ -895,35 +901,35 @@
   <div class="timeline">
 
     <div class="tl-item reveal">
-      <div class="tl-date">MAY 2024 — AUGUST 2024</div>
+      <div class="tl-date">JUN 2025 — JAN 2026</div>
       <div><span class="tl-badge" style="background:rgba(14,165,233,0.15); color:var(--accent)">INTERNSHIP</span></div>
-      <div class="tl-role">Software Engineering Intern</div>
-      <div class="tl-org">Company Name — Hyderabad, India</div>
-      <div class="tl-desc">Built and deployed microservices using Node.js and Docker. Contributed to a real-time analytics pipeline that processes 50K events/minute. Collaborated in a 12-person agile team using Jira and GitHub Actions.</div>
+      <div class="tl-role">AI Intern</div>
+      <div class="tl-org">Swecha Telangana (VISWAM.AI, IIIT Hyderabad)</div>
+      <div class="tl-desc">Developed Daily Lingo, an AI-based application for language learning and conversation practice. Built a chat-based system using open-source LLMs and deployed via Streamlit.</div>
     </div>
 
     <div class="tl-item reveal">
-      <div class="tl-date">DECEMBER 2023</div>
-      <div><span class="tl-badge" style="background:rgba(56,189,248,0.15); color:var(--accent2)">HACKATHON</span></div>
-      <div class="tl-role">Best EdTech Hack — HackWithIndia 2024</div>
-      <div class="tl-org">National-level 36-hour hackathon · 400+ participants</div>
-      <div class="tl-desc">Led a 4-person team to build StudyBot in 36 hours. Handled the LangChain backend and PDF ingestion pipeline. Presented to a panel of industry judges and won ₹50,000 in prizes.</div>
+      <div class="tl-date">OCT 2025 — JAN 2026</div>
+      <div><span class="tl-badge" style="background:rgba(56,189,248,0.15); color:var(--accent2)">INTERNSHIP</span></div>
+      <div class="tl-role">AI/ML Intern</div>
+      <div class="tl-org">Infosys Springboard</div>
+      <div class="tl-desc">Built machine learning models for real estate price prediction using structured datasets. Developed complete ML pipelines (preprocessing, feature engineering, training) and created a Streamlit dashboard.</div>
     </div>
 
     <div class="tl-item reveal">
-      <div class="tl-date">JUNE 2023 — AUGUST 2023</div>
+      <div class="tl-date">MAR 2025 — APR 2025</div>
       <div><span class="tl-badge" style="background:rgba(14,165,233,0.15); color:var(--accent)">INTERNSHIP</span></div>
-      <div class="tl-role">Full Stack Developer Intern</div>
-      <div class="tl-org">Startup Name — Remote</div>
-      <div class="tl-desc">Redesigned the customer-facing dashboard from scratch using React and Recharts, improving page load speed by 40%. Built a CSV export feature used by 500+ clients.</div>
+      <div class="tl-role">Web Development Intern</div>
+      <div class="tl-org">Edunet Foundation (AICTE × Microsoft)</div>
+      <div class="tl-desc">Developed responsive web interfaces and integrated frontend with backend systems. Collaborated in a team environment to build scalable components. Ranked among Top 30 out of 500+ participants.</div>
     </div>
 
     <div class="tl-item reveal">
-      <div class="tl-date">2021 — PRESENT</div>
+      <div class="tl-date">2022 — 2026</div>
       <div><span class="tl-badge" style="background:rgba(125,211,252,0.15); color:var(--accent3)">EDUCATION</span></div>
       <div class="tl-role">B.Tech in Computer Science</div>
-      <div class="tl-org">CGPA: 8.9 / 10</div>
-      <div class="tl-desc">Relevant coursework: Data Structures & Algorithms, Machine Learning, Distributed Systems, Computer Networks, Database Management. Core member of the college coding club and technical fest organising committee.</div>
+      <div class="tl-org">Malla Reddy College of Engineering for Women</div>
+      <div class="tl-desc">CGPA: 8.73 / 10. Relevant coursework: Data Structures & Algorithms, Machine Learning, Computer Vision. Team Lead for Smart India Hackathon 2025.</div>
     </div>
 
   </div>
@@ -936,10 +942,12 @@
     <h2>Let's build something together.</h2>
     <p class="contact-sub">Open to internships, full-time roles after graduation, and interesting project collaborations.</p>
     <div class="contact-links">
-      <a href="mailto:you@email.com" class="contact-link primary">📧 Email me</a>
-      <a href="https://linkedin.com" target="_blank" class="contact-link">LinkedIn ↗</a>
-      <a href="https://github.com" target="_blank" class="contact-link">GitHub ↗</a>
-      <a href="#" class="contact-link">Download CV ↗</a>
+      <a href="mailto:bethusathwika@gmail.com" class="contact-link primary">📧 Email me</a>
+      <a href="https://www.linkedin.com/in/sathwika-bethu/" target="_blank" class="contact-link">LinkedIn ↗</a>
+      <a href="https://github.com/sathwikabethu" target="_blank" class="contact-link">GitHub ↗</a>
+      <a href="https://leetcode.com/u/sathwikabethu/" target="_blank" class="contact-link">LeetCode ↗</a>
+      <a href="https://www.hackerrank.com/profile/bethusathwika" target="_blank" class="contact-link">HackerRank ↗</a>
+      <a href="sathwika_resume.pdf" target="_blank" class="contact-link">Download Resume ↗</a>
     </div>
   </div>
 </section>
