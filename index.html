@@ -131,6 +131,44 @@
       color: #fff;
     }
 
+    /* Mobile navigation menu button */
+    .nav-mobile-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      cursor: pointer;
+      z-index: 101;
+    }
+
+    .nav-mobile-btn span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .nav-mobile-btn.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      background-color: var(--accent);
+    }
+
+    .nav-mobile-btn.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-mobile-btn.open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      background-color: var(--accent);
+    }
+
+    .mobile-only-cta {
+      display: none;
+    }
+
     /* ── Sections ── */
     section {
       position: relative;
@@ -1126,6 +1164,155 @@
     }
 
     /* Responsive styling */
+    @media (max-width: 1024px) {
+      section {
+        padding: 5rem 2.5rem;
+      }
+      #hero {
+        padding: 8rem 2.5rem 4rem;
+      }
+      #about, #projects, #experience, #contact {
+        padding: 5rem 2.5rem;
+      }
+      #about {
+        gap: 4rem;
+      }
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 15px;
+      }
+      
+      /* Nav Mobile Drawer Styles */
+      nav {
+        padding: 1.25rem 1.5rem;
+      }
+      
+      .desktop-only-cta {
+        display: none !important;
+      }
+
+      .mobile-only-cta {
+        display: block;
+        margin-top: 1.5rem;
+      }
+
+      .nav-mobile-btn {
+        display: flex;
+        z-index: 1006;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(28, 3, 12, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-left: 1px solid var(--border);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: 1005;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .nav-links.open {
+        right: 0;
+      }
+
+      .nav-links a {
+        font-size: 1.1rem;
+      }
+
+      /* Spacing & Layout */
+      section {
+        padding: 4rem 1.5rem;
+      }
+      #hero {
+        padding: 7rem 1.5rem 3rem;
+        min-height: auto;
+      }
+      #about, #projects, #experience {
+        padding: 4rem 1.5rem;
+      }
+      #contact {
+        padding: 4rem 1.5rem 6rem;
+      }
+      
+      /* Hero overrides */
+      h1 {
+        font-size: clamp(2.4rem, 8vw, 4.5rem);
+        line-height: 1.1;
+      }
+      .hero-stats {
+        gap: 1.5rem;
+        margin-top: 3.5rem;
+        padding-top: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* About overrides */
+      #about {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .about-visual {
+        max-width: 500px;
+        margin: 2rem auto 0;
+        width: 100%;
+      }
+
+      /* Projects overrides */
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Timeline overrides */
+      .timeline {
+        padding-left: 1.25rem;
+        margin-top: 2rem;
+      }
+      .tl-item {
+        padding-left: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+      .tl-item::before {
+        left: -1.25rem;
+      }
+
+      /* Contact overrides */
+      .contact-blob {
+        padding: 2.5rem 1.5rem;
+        border-radius: 16px;
+      }
+      
+      /* Footer overrides */
+      footer {
+        padding: 1.5rem 1.5rem;
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+    }
+
     @media (max-width: 480px) {
       .chat-widget-container {
         bottom: 20px;
@@ -1136,6 +1323,25 @@
         width: calc(100vw - 40px);
         height: 450px;
         right: 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .code-card {
+        font-size: 0.72rem;
+      }
+      
+      .code-body {
+        padding: 1rem;
+      }
+
+      .contact-link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.78rem;
+        width: 100%;
+        justify-content: center;
       }
     }
   </style>
@@ -1155,14 +1361,20 @@
 
   <nav>
     <a href="#hero" class="nav-logo">S<span>B</span></a>
+    <div class="nav-mobile-btn" id="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="sathwika_resume.pdf" target="_blank">Resume</a></li>
+      <li class="mobile-only-cta"><a href="mailto:bethusathwika@gmail.com" class="nav-cta">hire me</a></li>
     </ul>
-    <a href="mailto:bethusathwika@gmail.com" class="nav-cta">hire me</a>
+    <a href="mailto:bethusathwika@gmail.com" class="nav-cta desktop-only-cta">hire me</a>
   </nav>
 
   <!-- HERO -->
@@ -1563,6 +1775,40 @@
   </div>
 
   <script>
+    // ── Mobile Navigation Toggle ──
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (menuToggle && navLinksContainer) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('open');
+        navLinksContainer.classList.toggle('open');
+        // Prevent background scrolling when menu is open
+        document.body.style.overflow = navLinksContainer.classList.contains('open') ? 'hidden' : '';
+      });
+
+      // Close menu when clicking a link
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('open');
+          navLinksContainer.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (navLinksContainer.classList.contains('open') && 
+            !navLinksContainer.contains(e.target) && 
+            !menuToggle.contains(e.target)) {
+          menuToggle.classList.remove('open');
+          navLinksContainer.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
