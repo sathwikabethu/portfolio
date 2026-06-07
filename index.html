@@ -1830,6 +1830,7 @@
 
     // Portfolio local database for high-speed keyword replies
     const botDatabase = {
+      greeting: "Hello! Welcome to Sathwika's portfolio space. 🚀 I'm her AI assistant. How can I help you explore her work today?",
       about: "Sathwika is a final year Computer Science Engineering student (graduating in 2026) with a passion for Machine Learning, Data Science, and Full Stack Development. She loves building intelligent software that solves real-world challenges.",
       skills: "Here is her core tech stack:<br>• <strong>Languages</strong>: Python, C, SQL, HTML/CSS<br>• <strong>ML & Data Science</strong>: TensorFlow, NumPy, Pandas, OpenCV, NLP, Computer Vision<br>• <strong>Frameworks & Tools</strong>: Django, Streamlit, PostgreSQL, Git/GitHub, Vercel",
       projects: "Some of her projects include:<br>1. <strong>Fake Social Profile Detection</strong> (Neural Networks)<br>2. <strong>Smart Stay</strong> (Hostel Management web app)<br>3. <strong>Virtual Shopping via Webcam</strong> (OpenCV gesture control)<br>4. <strong>Daily Lingo</strong> (Streamlit AI chat app)<br>5. <strong>RPS Gesture Game</strong> (OpenCV/MediaPipe gesture game)<br>6. <strong>Portfolio Chatbot</strong> (AI assistant using Groq)",
@@ -1909,7 +1910,9 @@
         let botResponse = "";
 
         // Smart keyword routing
-        if (queryLower.includes('about') || queryLower.includes('who are you') || queryLower.includes('education') || queryLower.includes('study')) {
+        if (/\b(hi|hello|hey|greetings|yo)\b/i.test(queryLower)) {
+          botResponse = botDatabase.greeting;
+        } else if (queryLower.includes('about') || queryLower.includes('who are you') || queryLower.includes('education') || queryLower.includes('study')) {
           botResponse = botDatabase.about;
         } else if (queryLower.includes('skill') || queryLower.includes('languages') || queryLower.includes('framework') || queryLower.includes('tech stack')) {
           botResponse = botDatabase.skills;
