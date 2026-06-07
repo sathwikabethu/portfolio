@@ -1912,7 +1912,7 @@
         // Smart keyword routing
         if (/\b(hi|hie|hello|hey|greetings|yo)\b/i.test(queryLower)) {
           botResponse = botDatabase.greeting;
-        } else if (queryLower.includes('about') || queryLower.includes('who are you') || queryLower.includes('education') || queryLower.includes('study')) {
+        } else if (queryLower.includes('about') || queryLower.includes('who are you') || queryLower.includes('who r u') || queryLower.includes('who r you') || queryLower.includes('education') || queryLower.includes('study')) {
           botResponse = botDatabase.about;
         } else if (queryLower.includes('skill') || queryLower.includes('languages') || queryLower.includes('framework') || queryLower.includes('tech stack')) {
           botResponse = botDatabase.skills;
